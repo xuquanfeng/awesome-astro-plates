@@ -164,6 +164,32 @@ window.ASTRO_CATALOG = [
     "shortTitleEn": "Chinese Plate Digitizers"
   },
   {
+    "id": "multiple-exposure-plate-pipeline",
+    "title": "Data processing pipeline for multiple-exposure photo-plate digital archives",
+    "shortTitle": "多次曝光底片档案处理流水线",
+    "description": "针对单张底片记录同一片天空多次曝光的特殊观测数据，提出结合经典图像处理与机器学习的流水线，自动检测耀发与移动目标，并在中国天文底片数据上取得初步验证。",
+    "authors": "Peng Jia et al.",
+    "year": 2023,
+    "venue": "PASJ · 75, 811",
+    "category": "data",
+    "tags": [
+      "多次曝光",
+      "底片档案",
+      "流水线"
+    ],
+    "url": "https://doi.org/10.1093/pasj/psad038",
+    "citationAuthor": "Peng Jia and Zhimin Yang and Zhengjun Shang and Yong Yu and Jianhai Zhao",
+    "doi": "10.1093/pasj/psad038",
+    "kind": "paper",
+    "descriptionEn": "Presents a pipeline combining classical image processing with machine learning to automatically detect flares and moving targets in multiple-exposure photo-plate images, which record the same sky at different times on a single plate; preliminary tests on digitized plates from the China Astronomical Plates Data show the approach is effective.",
+    "tagsEn": [
+      "Multiple exposures",
+      "Plate archives",
+      "Pipeline"
+    ],
+    "shortTitleEn": "Multiple-Exposure Plate Pipeline"
+  },
+  {
     "id": "naroo-digitization-center",
     "title": "The NAROO digitization center: Overview and scientific program",
     "shortTitle": "NAROO 数字化中心",
@@ -188,6 +214,32 @@ window.ASTRO_CATALOG = [
       "Astrometry"
     ],
     "shortTitleEn": "NAROO Digitization Center"
+  },
+  {
+    "id": "ukrvo-catalogs",
+    "title": "Catalogs of celestial bodies from digitized photographic plates of the Ukrainian Virtual Observatory Archive",
+    "shortTitle": "UkrVO 数字化底片星表",
+    "description": "概述乌克兰虚拟天文台（UkrVO）档案的星表产品与处理流程：馆藏覆盖 1898–2018 年 8 个天文台约 4 万张底片，其中约 1.5 万张已完成数字化，由此生成天体测量与测光星表。",
+    "authors": "Y. Protsyuk et al.",
+    "year": 2020,
+    "venue": "Commun. Byurakan Obs. · 67, 286",
+    "category": "data",
+    "tags": [
+      "UkrVO",
+      "星表",
+      "底片档案"
+    ],
+    "url": "https://doi.org/10.52526/25792776-2020.67.2-286",
+    "citationAuthor": "Y. Protsyuk and I. Vavilova and V. Andruk and L. Pakuliak and S. Shatokhina and O. Yizhakevych",
+    "doi": "10.52526/25792776-2020.67.2-286",
+    "kind": "paper",
+    "descriptionEn": "Summarizes the catalog products and processing chain of the Ukrainian Virtual Observatory archive, which covers about 40,000 plates from eight observatories (1898–2018), about 15,000 of them already digitized, and the astrometric and photometric catalogs derived from them.",
+    "tagsEn": [
+      "UkrVO",
+      "Catalogs",
+      "Plate archives"
+    ],
+    "shortTitleEn": "UkrVO Plate Catalogs"
   },
   {
     "id": "hudec-plate-archives",
@@ -292,6 +344,32 @@ window.ASTRO_CATALOG = [
       "Pulkovo"
     ],
     "shortTitleEn": "Pulkovo Double-Star Plates"
+  },
+  {
+    "id": "ukrainian-observatory-digitization",
+    "title": "Photographic Archives of Ukrainian Observatories: Digitizing a Heritage",
+    "shortTitle": "乌克兰天文台底片数字化",
+    "description": "介绍乌克兰虚拟天文台（UkrVO）联合数字化乌克兰各天文台百年底片馆藏的关键项目，讨论用平板扫描仪数字化底片的方法，以及把数字图像与 CCD 档案合并为 UkrVO 联合数字档案的计划。",
+    "authors": "Ludmila Pakuliak et al.",
+    "year": 2011,
+    "venue": "IAU Symp. · 285, 389",
+    "category": "data",
+    "tags": [
+      "乌克兰底片",
+      "数字化",
+      "UkrVO"
+    ],
+    "url": "https://doi.org/10.1017/S1743921312001160",
+    "citationAuthor": "Ludmila Pakuliak and Lilia Kazantseva and Natalia Virun and Vitaly Andruk",
+    "doi": "10.1017/S1743921312001160",
+    "kind": "paper",
+    "descriptionEn": "Describes a key project of the Ukrainian Virtual Observatory to digitize the large photographic plate collections exposed over more than a century at Ukrainian observatories, discusses flatbed scanners for plate digitization, and outlines combining the digital images with CCD archives into the UkrVO Joint Digital Archive.",
+    "tagsEn": [
+      "Ukrainian plates",
+      "Digitization",
+      "UkrVO"
+    ],
+    "shortTitleEn": "Digitizing Ukrainian Plates"
   },
   {
     "id": "dasch-century-window",
@@ -474,6 +552,32 @@ window.ASTRO_CATALOG = [
     ]
   },
   {
+    "id": "fon-kitab-plates",
+    "title": "Astrometry and photometry of digitized plates of the FON-KITAB project",
+    "shortTitle": "FON-KITAB 底片天体测量与测光",
+    "description": "介绍 FON-KITAB 项目中数字化底片的天体测量与测光处理，涵盖扫描图像的处理流程、参考星归算与测光定标结果。",
+    "authors": "Q. Yuldoshev et al.",
+    "year": 2016,
+    "venue": "Bull. Kyiv Univ. Astron. · 54, 28",
+    "category": "photometry",
+    "tags": [
+      "FON-KITAB",
+      "测光",
+      "天体测量"
+    ],
+    "url": "https://doi.org/10.17721/btsnua.2016.54.28-31",
+    "citationAuthor": "Q. Yuldoshev and O. Usmanov and Sh. Ehgamberdiev and M. Muminov and H. Relke and Yu. Protsyuk and V. Andruk",
+    "doi": "10.17721/btsnua.2016.54.28-31",
+    "kind": "paper",
+    "descriptionEn": "Describes the astrometric and photometric processing of digitized plates in the FON-KITAB project, covering the processing chain for scanned images, the reference-star reduction, and the photometric calibration results.",
+    "tagsEn": [
+      "FON-KITAB",
+      "Photometry",
+      "Astrometry"
+    ],
+    "shortTitleEn": "FON-KITAB Plate Processing"
+  },
+  {
     "id": "dasch-photometry-pipeline",
     "title": "Improved Photometry for the DASCH Pipeline",
     "shortTitle": "DASCH 流水线测光改进",
@@ -498,6 +602,32 @@ window.ASTRO_CATALOG = [
       "Light curves"
     ],
     "shortTitleEn": "DASCH Photometry Improvements"
+  },
+  {
+    "id": "ubai-plate-archive",
+    "title": "Astrometric analysis of digitized historical plates: the Ulugh Beg Astronomical Institute archive",
+    "shortTitle": "乌兹别克斯坦 UBAI 底片档案",
+    "description": "系统介绍乌兹别克斯坦乌鲁伯格天文研究所（UBAI）超过 1.5 万张玻璃底片的分类、保存与数字化工作，并给出改进的处理流水线：PSF 拟合（SExtractor/PSFEx）、Gaia DR3 二次归算、三阶底片模型与局部畸变改正，显著提高历史底片的天体测量精度。",
+    "authors": "Q. Yuldoshev et al.",
+    "year": 2026,
+    "venue": "MNRAS · 547",
+    "category": "astrometry",
+    "tags": [
+      "乌兹别克斯坦",
+      "UBAI",
+      "处理流水线"
+    ],
+    "url": "https://doi.org/10.1093/mnras/stag335",
+    "citationAuthor": "Qudratillo Yuldoshev and Zheng-Jun Shang and Sobir Turaev and Mei-Ting Yang and Shuhrat Ehgamberdiev and Muydinjon Muminov and Jing Yang and Liang-Liang Wang and Yong Yu and Zheng-Hong Tang and Jian-Hai Zhao",
+    "doi": "10.1093/mnras/stag335",
+    "kind": "paper",
+    "descriptionEn": "Presents the UBAI archive of more than 15,000 glass plates from the Tashkent Normal Astrograph and the Zeiss Double Astrograph, its classification, preservation, and digitization, and an improved processing pipeline using PSF fitting (SExtractor/PSFEx), a refined Gaia DR3 reduction, a third-order plate model, magnitude-equation correction, and a local distortion correction that markedly improves the astrometric accuracy of the historical plates.",
+    "tagsEn": [
+      "Uzbekistan",
+      "UBAI",
+      "Processing pipeline"
+    ],
+    "shortTitleEn": "UBAI Plate Archive"
   },
   {
     "id": "pallas-vesta-plates",
@@ -550,6 +680,32 @@ window.ASTRO_CATALOG = [
       "Astrometric calibration"
     ],
     "shortTitleEn": "Carte du Ciel with Gaia DR1"
+  },
+  {
+    "id": "ukrvo-pluto-plates",
+    "title": "Processing results of digitized photographic observations of Pluto from the collections of the Ukrainian Virtual Observatory",
+    "shortTitle": "UkrVO 冥王星底片处理",
+    "description": "处理乌克兰虚拟天文台（UkrVO）馆藏底片中的冥王星照相观测，介绍数字化图像的处理流程，并给出位置测量结果与精度评估。",
+    "authors": "L. V. Kazantseva et al.",
+    "year": 2015,
+    "venue": "Kin. Phys. Celest. Bodies · 31, 37",
+    "category": "astrometry",
+    "tags": [
+      "冥王星",
+      "UkrVO",
+      "底片处理"
+    ],
+    "url": "https://doi.org/10.3103/S0884591315010031",
+    "citationAuthor": "L. V. Kazantseva and S. V. Shatokhina and Yu. I. Protsyuk and O. E. Kovylianska and V. M. Andruk",
+    "doi": "10.3103/S0884591315010031",
+    "kind": "paper",
+    "descriptionEn": "Processes digitized photographic observations of Pluto from the Ukrainian Virtual Observatory collections, describes the processing chain for the digitized images, and presents the resulting position measurements and accuracy assessment.",
+    "tagsEn": [
+      "Pluto",
+      "UkrVO",
+      "Plate processing"
+    ],
+    "shortTitleEn": "UkrVO Pluto Plate Processing"
   },
   {
     "id": "dasch-astrometry",
