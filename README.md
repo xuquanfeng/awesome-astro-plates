@@ -8,6 +8,8 @@
 
 本网站地址是 https://xuquanfeng.github.io/awesome-astro-plates/ ；历史工作包括 SuperCOSMOS、DASCH、中国底片数字化和 APPLAUSE。每条资料都链接至原论文或官方网站。
 
+相关资源 / Related resource · [Awesome AI for Astronomy](https://xin-yuxiao.github.io/Awesome-AI-for-Astronomy/)
+
 ## 资源目录 · Catalog
 
 本目录收录 [`data/catalog.js`](data/catalog.js) 中的 53 项资源，包括 38 篇论文、4 个数据档案、9 项工具和 2 项标准。
