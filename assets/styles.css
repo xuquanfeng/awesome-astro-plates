@@ -14,11 +14,6 @@ html[data-theme="dark"]{--bg:#151a26;--surface:#1c2230;--sidebar:#191f2c;--text:
 @media(max-width:640px){.stats{gap:8px;margin:14px 0 27px}.topic-card{padding:12px 10px}.topic-title{margin-top:8px;display:block}.topic-title h2{font-size:14px}.topic-title>span{display:block;margin-top:5px;font-size:8px}.topic-card p{font-size:7px;line-height:1.8}.topic-icon svg{width:17px;height:17px}.topic-number{font-size:7px}.topic-group-cards{grid-template-columns:1fr}html[lang="en"] .topic-title h2{font-size:11px;min-height:29px}html[lang="en"] .topic-card p{font-size:7px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
-.hero-secondary-actions {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
 .hero-related-link {
   border-color: #a9a5c5;
   color: #eceafa;
