@@ -50,6 +50,18 @@
   - 介绍巴黎天文台默东园区的 NAROO 数字化中心：花岗岩气浮 XY 平台、科学级 sCMOS 相机与远心光路，可处理 350 mm 见方的玻璃底片，定位稳定性优于 15 nm；并给出 Gaia 时代利用旧底片开展天体测量研究的科学计划。
   - Introduces the NAROO digitization center at Paris Observatory in Meudon, built on a granite-based air-bearing XY table with a scientific sCMOS camera and telecentric optics for plates up to 350 mm square, with positioning stability better than 15 nm, and outlines its science program in the Gaia era.
 
+- [Data processing pipeline for multiple-exposure photo-plate digital archives](https://doi.org/10.1093/pasj/psad038) (2023) — Peng Jia et al.
+  - 针对单张底片记录同一片天空多次曝光的特殊观测数据，提出结合经典图像处理与机器学习的流水线，自动检测耀发与移动目标，并在中国天文底片数据上取得初步验证。
+  - Presents a pipeline combining classical image processing with machine learning to automatically detect flares and moving targets in multiple-exposure photo-plate images, which record the same sky at different times on a single plate; preliminary tests on digitized plates from the China Astronomical Plates Data show the approach is effective.
+
+- [Catalogs of celestial bodies from digitized photographic plates of the Ukrainian Virtual Observatory Archive](https://doi.org/10.52526/25792776-2020.67.2-286) (2020) — Y. Protsyuk et al.
+  - 概述乌克兰虚拟天文台（UkrVO）档案的星表产品与处理流程：馆藏覆盖 1898–2018 年 8 个天文台约 4 万张底片，其中约 1.5 万张已完成数字化，由此生成天体测量与测光星表。
+  - Summarizes the catalog products and processing chain of the Ukrainian Virtual Observatory archive, which covers about 40,000 plates from eight observatories (1898–2018), about 15,000 of them already digitized, and the astrometric and photometric catalogs derived from them.
+
+- [Photographic Archives of Ukrainian Observatories: Digitizing a Heritage](https://doi.org/10.1017/S1743921312001160) (2011) — Ludmila Pakuliak et al.
+  - 介绍乌克兰虚拟天文台（UkrVO）联合数字化乌克兰各天文台百年底片馆藏的关键项目，讨论用平板扫描仪数字化底片的方法，以及把数字图像与 CCD 档案合并为 UkrVO 联合数字档案的计划。
+  - Describes a key project of the Ukrainian Virtual Observatory to digitize the large photographic plate collections exposed over more than a century at Ukrainian observatories, discusses flatbed scanners for plate digitization, and outlines combining the digital images with CCD archives into the UkrVO Joint Digital Archive.
+
 - [Opening the 100-Year Window for Time-Domain Astronomy](https://doi.org/10.1017/S1743921312000166) (2011) — Jonathan Grindlay et al.
   - 介绍 DASCH 项目把 1890–1990 年哈佛底片数字化为覆盖全天的百年时域数据库，说明项目进展与首批结果，并展望 2012 年起批量扫描与数据发布。
   - Describes how the DASCH project is digitizing 1890–1990 Harvard plates into an all-sky century-long time-domain database, reports early results, and outlines the production scanning and data distribution planned from 2012.
@@ -116,6 +128,10 @@
   - 对 SExtractor 提取的候选源进行 Transformer 分类，筛选可靠恒星，改善退化中国历史底片的天体测量配准。
   - Uses a Transformer classifier to select reliable stellar sources from SExtractor detections, improving astrometric registration of degraded Chinese historical plates.
 
+- [Astrometric analysis of digitized historical plates: the Ulugh Beg Astronomical Institute archive](https://doi.org/10.1093/mnras/stag335) (2026) — Q. Yuldoshev et al.
+  - 系统介绍乌兹别克斯坦乌鲁伯格天文研究所（UBAI）超过 1.5 万张玻璃底片的分类、保存与数字化工作，并给出改进的处理流水线：PSF 拟合（SExtractor/PSFEx）、Gaia DR3 二次归算、三阶底片模型与局部畸变改正，显著提高历史底片的天体测量精度。
+  - Presents the UBAI archive of more than 15,000 glass plates, its classification, preservation, and digitization, and an improved processing pipeline using PSF fitting (SExtractor/PSFEx), a refined Gaia DR3 reduction, a third-order plate model, magnitude-equation correction, and a local distortion correction that markedly improves the astrometric accuracy of the historical plates.
+
 - [New reduction of old glass astronomical plates of Pallas and Vesta in 1956–1994 based on Gaia DR3 catalogue](https://doi.org/10.1016/j.pss.2023.105637) (2023) — L. L. Wang et al.
   - 基于 Gaia DR3 重新归算 1956–1994 年间拍摄的智神星与灶神星玻璃底片，检验旧底片在小行星天体测量中的精度。
   - Re-reduces 1956–1994 glass plates of Pallas and Vesta against Gaia DR3, testing the astrometric accuracy achievable from old plates for asteroids.
@@ -123,6 +139,10 @@
 - [Digitization and astrometric calibration of Carte du Ciel photographic plates with Gaia DR1](https://doi.org/10.1051/0004-6361/201832662) (2018) — K. Lehtinen et al.
   - 利用 Gaia DR1 对 Carte du Ciel 照相底片进行数字化与天体测量定标，评估这批 19 世纪底片在 Gaia 参考架下的定位精度。
   - Digitizes and astrometrically calibrates Carte du Ciel photographic plates against Gaia DR1, assessing the positional accuracy of these nineteenth-century plates in the Gaia reference frame.
+
+- [Processing results of digitized photographic observations of Pluto from the collections of the Ukrainian Virtual Observatory](https://doi.org/10.3103/S0884591315010031) (2015) — L. V. Kazantseva et al.
+  - 处理乌克兰虚拟天文台（UkrVO）馆藏底片中的冥王星照相观测，介绍数字化图像的处理流程，并给出位置测量结果与精度评估。
+  - Processes digitized photographic observations of Pluto from the Ukrainian Virtual Observatory collections, describes the processing chain for the digitized images, and presents the resulting position measurements and accuracy assessment.
 
 - [A new astrometric reduction of photographic plates using the DAMIAN digitizer: improving the dynamics of the Jovian system](https://doi.org/10.1111/j.1365-2966.2011.18747.x) (2011) — V. Robert et al.
   - 使用 DAMIAN 数字化仪重新测量并归算木星系统卫星的历史照相底片，改进木星系统的动力学模型。
@@ -169,6 +189,10 @@
 - [DASCH: Bringing 100+ Years of Photographic Data into the 21st Century and Beyond](https://arxiv.org/abs/2501.12977) (2025) — Peter K. G. Williams
   - 总结 DASCH 扫描项目及 DR7 数据产品，介绍百年尺度底片图像、校准光变曲线和相关元数据的科学用途。
   - Reviews the DASCH scanning project and DR7 products, including century-scale plate images, calibrated light curves, and supporting metadata.
+
+- [Astrometry and photometry of digitized plates of the FON-KITAB project](https://doi.org/10.17721/btsnua.2016.54.28-31) (2016) — Q. Yuldoshev et al.
+  - 介绍 FON-KITAB 项目中数字化底片的天体测量与测光处理，涵盖扫描图像的处理流程、参考星归算与测光定标结果。
+  - Describes the astrometric and photometric processing of digitized plates in the FON-KITAB project, covering the processing chain for scanned images, the reference-star reduction, and the photometric calibration results.
 
 - [Improved Photometry for the DASCH Pipeline](https://doi.org/10.1086/671760) (2013) — Sumin Tang et al.
   - 改进 DASCH 流水线的测光方法，提高哈佛百年底片光变曲线的测光精度与一致性。
