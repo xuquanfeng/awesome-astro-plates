@@ -111,6 +111,10 @@
     "Follow the timeline"
   ],
   [
+    "相关链接",
+    "Related link"
+  ],
+  [
     "历史底片星场的概念插画，非科学数据",
     "Conceptual illustration of a historical plate; not scientific data"
   ],
