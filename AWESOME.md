@@ -82,6 +82,17 @@
   - 介绍大视场摄影巡天的数字化数据、访问接口、测量精度与应用，是理解底片巡天数据库的早期代表性工作。
   - Introduces digitized photographic survey data, access interfaces, measurement accuracy, and scientific applications: an early reference for plate-based survey databases.
 
+- [The astrometric and photometric results of digitized plates on Epson Expression 10000XL scanner with different resolutions](https://doi.org/10.18524/1810-4215.2019.32.181734) (2019) — Q. Yuldoshev et al.
+  - 比较 Epson Expression 10000XL 平板扫描仪在不同分辨率与灰度位深下数字化底片的天体测量与测光结果，发现 1200 dpi、16 位灰度最优，位置与星等精度约 0.07″ 与 0.13 mag。
+  - Compares the astrometric and photometric results of plates digitized with an Epson Expression 10000XL flatbed scanner at different resolutions and gray levels, finding 1200 dpi and 16-bit gray optimal, with about 0.07 arcsec positional and 0.13 mag photometric accuracy.
+
+- [Finding hidden treasures: investigations in US astronomical plate archives](https://doi.org/10.14311/1702) (2013) — René Hudec & Lukáš Hudec
+  - 调查美国多个天文台底片档案的保存状况，并测试可运输扫描设备用于现场数字化的可行性。
+  - Reports an investigation of US astronomical plate archives and tests of transportable scanning devices for in situ digitization of archival plates.
+
+- [US astronomical photographic data archives: hidden treasures and importance for high-energy astrophysics](https://doi.org/10.14311/app.2014.01.0316) (2014) — René Hudec & Lukáš Hudec
+  - 在 2013 年调查的基础上，强调美国照相底片档案对高能天体物理（暂现源与长期光变）的价值，并继续测试现场数字化设备。
+  - Extends the US plate-archive survey with emphasis on high-energy astrophysics, including transient and long-term variability studies, and on transportable digitization equipment.
 - [DASCH](https://dasch.cfa.harvard.edu/) — Harvard & Smithsonian
   - 哈佛底片数字化项目的科学数据文档与 DR7 访问入口。
   - Scientific documentation and DR7 access for the Harvard astronomical plate digitization project.
@@ -164,6 +175,37 @@
   - 利用恒星几何图形匹配进行盲天体测量定标，是现代底片自动配准工作常用的方法基础。
   - Uses geometric patterns of stars for blind astrometric calibration, providing a foundation for automated registration in modern plate-processing workflows.
 
+- [Compiling catalogs of stellar coordinates and proper motions via coprocessing of archival photographic and modern CCD observations](https://doi.org/10.3103/s0884591314060051) (2014) — Yu. I. Protsyuk et al.
+  - 把档案底片与现代 CCD 观测联合处理，编制恒星坐标与自行星表；介绍 MIDAS/ROMAFOT 处理流程与 PlateGraf 软件，位置残差约 40–100 mas。
+  - Combines archival photographic plates with modern CCD observations to compile catalogs of stellar coordinates and proper motions, describing the MIDAS/ROMAFOT processing chain and the PlateGraf software, with plate-to-catalog residuals of about 40–100 mas.
+
+- [Catalogue of asteroids from digitized photographic plates of the FON program](https://doi.org/10.3103/s0884591318050045) (2018) — S. V. Shatokhina et al.
+  - 基于 FON 项目数字化底片编制小行星星表，给出位置与星等的测量流程和结果。
+  - Compiles a catalogue of asteroids from digitized photographic plates of the FON program, describing the measurement pipeline and the resulting positions and magnitudes.
+
+- [The equatorial coordinates and B-magnitudes of the stars in the southern hemisphere zones based on the digitized astronegatives of FON project at the Ulugh Beg Astronomical Institute](https://doi.org/10.18524/1810-4215.2016.29.85182) (2016) — Q. X. Yuldoshev et al.
+  - 利用乌兹别克斯坦乌鲁伯格天文研究所 FON 项目的数字化底片，编制南天区恒星的赤道坐标与 B 星等。
+  - Derives equatorial coordinates and B-magnitudes for stars in southern-hemisphere zones from digitized FON project plates at the Ulugh Beg Astronomical Institute in Uzbekistan.
+
+- [Catalog of equatorial coordinates and B-magnitudes of stars of the FON project](https://doi.org/10.3103/S0884591316050032) (2016) — V. M. Andruk et al.
+  - 介绍 FON 项目恒星赤道坐标与 B 星等星表的编制方法与结果。
+  - Presents the catalog of equatorial coordinates and B-magnitudes of stars from the FON project, with its reduction method and resulting accuracy.
+
+- [Re-reduction of the old photographic observations of Interamnia (704) based on Gaia DR2 reference catalogue](https://doi.org/10.18524/1810-4215.2020.33.216407) (2020) — Yu. I. Protsyuk et al.
+  - 用 Gaia DR2 重新归算小行星 (704) Interamnia 的历史照相观测，并比较 Epson 与 SHAO 扫描图像对精度的提升。
+  - Re-reduces historical photographic observations of asteroid (704) Interamnia against Gaia DR2, comparing the improvement obtained from Epson-scanned and SHAO-scanned images.
+
+- [New astrometric measurement and reduction of USNO photographic observations of the main Saturnian satellites: 1974–1998](https://doi.org/10.1051/0004-6361/201629807) (2016) — V. Robert et al.
+  - 用 DAMIAN 数字化仪重新测量并归算 USNO 1974–1998 年土星主要卫星的照相底片，改进卫星运动模型。
+  - Re-measures and reduces USNO photographic observations of the main Saturnian satellites from 1974–1998 with the DAMIAN digitizer, improving the satellites dynamical model.
+
+- [Astrometric observations of Phobos and Deimos during the 1971 opposition of Mars](https://doi.org/10.1051/0004-6361/201424384) (2014) — V. Robert et al.
+  - 处理 1971 年火星冲日期间火卫一、火卫二的照相观测，给出天体测量方法与结果，是后续卫星底片归算的方法基础。
+  - Presents astrometric observations of Phobos and Deimos during the 1971 opposition of Mars, including the measurement and reduction methods used for the plates.
+
+- [A new reduction of digitized photographic plates with selected asteroids obtained with the normal astrograph of the Pulkovo Observatory from 1948 to 1990](https://doi.org/10.1134/S0038094613020019) (2013) — A. A. Berezhnoi
+  - 对普尔科沃天文台 1948–1990 年正常天体照相仪拍摄的 1545 张底片中的选中小行星重新归算，分析匹配系统差并用残差分布修正赤经赤纬。
+  - Re-reduces 1,545 digitized plates with selected asteroids taken with the Pulkovo normal astrograph between 1948 and 1990, analysing matching systematics and correcting right ascension and declination from residual distributions.
 - [Astrometry.net](https://explore.astrometry.net/use.html) — Astrometry.net team
   - 对天文图像进行盲天体测量定标，提供在线服务和本地软件。
   - Blind astrometric calibration of astronomical images, available as an online service and locally installed software.
@@ -210,6 +252,37 @@
   - 系统讨论底片图像的源检测、参数化、分类与测光方法，为后续自动化底片处理提供技术参照。
   - Describes detection, parameterization, classification, and photometry of plate images, providing a technical reference for automated plate processing.
 
+- [Photometry of plates digitized using Microtek ScanMaker 9800XL TMA scanner](https://doi.org/10.3103/s0884591310030062) (2010) — V. M. Andruk et al.
+  - 评估 Microtek ScanMaker 9800XL TMA 扫描仪数字化底片的测光精度（约 ±0.05 mag），并分析扫描模式、底片材料、望远镜参数与参考星表等误差来源。
+  - Assesses the photometric accuracy achievable with plates digitized by a Microtek ScanMaker 9800XL TMA scanner (about ±0.05 mag) and analyses error sources including scanning mode, plate material, telescope parameters, and reference catalog.
+
+- [About star photometry on digitized astronegatives](https://doi.org/10.15407/scine13.01.015) (2017) — V. M. Andruk et al.
+  - 讨论数字化底片上的恒星测光方法：仪器星等与参考星等的关系、特征曲线与平场处理，并给出多台站底片的测光结果。
+  - Discusses star photometry on digitized astronegatives, covering the relation between instrumental and reference magnitudes, characteristic curves and flat-field treatment, with results from several plate collections.
+
+- [U-values of stars and galaxies from digitized astronomic negatives obtained by Baldone Schmidt telescope](https://doi.org/10.17721/btsnua.2016.54.21-24) (2016) — I. Eglitis et al.
+  - 处理 Baldone Schmidt 望远镜的数字化底片，给出恒星与星系的 U 波段星等。
+  - Derives U-band magnitudes of stars and galaxies from digitized astronomical negatives obtained with the Baldone Schmidt telescope.
+
+- [Photometry of stars for astronegatives with a single exposure](https://doi.org/10.18524/1810-4215.2019.32.181596) (2019) — V. Andruk et al.
+  - 针对单次曝光底片的恒星测光方法，讨论仪器星等归算与参考星表定标。
+  - Presents the photometry of stars on single-exposure astronegatives, including instrumental-magnitude reduction and calibration against reference catalogs.
+
+- [Note on magnitude estimation on digitized astronomical photographic plates](https://doi.org/10.31577/caosp.2020.50.3.704) (2020) — R. Hudec & E. Splittgerber
+  - 提出一种快速肉眼估计数字化底片星等的方法，并用数百张底片上造父变星的光变曲线验证其与仪器测量的一致性。
+  - Proposes a fast visual method for estimating magnitudes on digitized photographic plates and validates it against instrumental measurements using Cepheid light curves from several hundred plates.
+
+- [A photometric pilot study on Sonneberg archival patrol plates](https://doi.org/10.1051/0004-6361:20040457) (2004) — N. Vogt et al.
+  - 以 Sonneberg 天文台巡天底片为样本开展测光试点研究，评估历史底片用于长期光变研究的可行性。
+  - A photometric pilot study on Sonneberg archival patrol plates that assesses the feasibility of using historical plates for long-term variability research.
+
+- [Hamburger Sternwarte plate archives: historic long-term variability study of active galaxies based on digitized photographic plates](https://doi.org/10.1002/asna.201613201) (2017) — M. Wertz et al.
+  - 介绍汉堡天文台 4.5 万余张底片的数字化与在线发布（3.1 万余张已上线），并用 PyPlate 流程处理，研究活动星系的长期光变。
+  - Describes the digitization and online release of more than 45,000 Hamburg observatory plates, their PyPlate-based processing, and a historic long-term variability study of active galaxies.
+
+- [PHOTOMETRYPIPELINE: An automated pipeline for calibrated photometry](https://doi.org/10.1016/j.ascom.2016.11.002) (2017) — M. Mommert
+  - 介绍一套自动化的定标测光流水线，可对图像完成源检测、参考星匹配与测光定标，也适用于历史底片图像。
+  - Presents an automated pipeline for calibrated photometry that performs source detection, reference-star matching, and photometric calibration, applicable to historical plate images as well.
 - [SExtractor](https://sextractor.readthedocs.io/en/latest/) — SExtractor documentation
   - 天文图像源提取工具，支持背景估计、源测量与测光。
   - Astronomical source extraction, with background estimation, source measurements, and photometry.
