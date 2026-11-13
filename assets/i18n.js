@@ -481,7 +481,24 @@
   [
     "本地阅读偏好无法读取，已使用默认设置。",
     "Local reading preferences could not be read. Default settings are in use."
-  ]
+  ],
+  [
+    "按国家 · BY COUNTRY",
+    "BY COUNTRY"
+  ],
+  ["中国", "China"],
+  ["美国", "United States"],
+  ["英国", "United Kingdom"],
+  ["德国", "Germany"],
+  ["法国", "France"],
+  ["比利时", "Belgium"],
+  ["乌克兰", "Ukraine"],
+  ["乌兹别克斯坦", "Uzbekistan"],
+  ["俄罗斯", "Russia"],
+  ["捷克", "Czechia"],
+  ["芬兰", "Finland"],
+  ["爱沙尼亚", "Estonia"],
+  ["拉脱维亚", "Latvia"]
 ];
   const base = new Map(pairs); let translations = new Map(base);
   const textMemory = new WeakMap(), attributeMemory = new WeakMap();
@@ -496,6 +513,7 @@
       else if(trimmed.startsWith('及对应论文核对。初始目录核对日期：'))translated=trimmed.replace('及对应论文核对。初始目录核对日期：','and corresponding papers. Initial verification date: ').replace(/。$/,'.');
       else if(trimmed.startsWith('取消收藏 '))translated='Remove bookmark: '+translate(trimmed.slice(5));
       else if(trimmed.startsWith('收藏 '))translated='Bookmark: '+translate(trimmed.slice(3));
+      else if(trimmed.startsWith('按国家浏览：'))translated='Browse by country: '+translate(trimmed.slice(6));
       else if(trimmed.includes('让历史星空继续发光'))translated=trimmed.replace('让历史星空继续发光','Keeping the historical sky alive');
     }
     if(translated===undefined)return text;
