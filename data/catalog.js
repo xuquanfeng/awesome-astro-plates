@@ -1,5 +1,6 @@
 // Public bilingual catalog. Categories: data, astrometry, photometry.
 // Each entry has a primary "category"; to place one entry under several sections, add "categories": ["data", "astrometry"] (the first item stays primary).
+// "countries" lists country codes for the by-country view: cn, us, uk, de, fr, be, ua, uz, ru, cz, fi, ee, lv.
 window.ASTRO_CATALOG = [
   {
     "id": "plate-yolo",
@@ -29,7 +30,10 @@ window.ASTRO_CATALOG = [
       "Astrometry"
     ],
     "shortTitleEn": "Plate-YOLO",
-    "venueEn": "AJ · Accepted"
+    "venueEn": "AJ · Accepted",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "ai-plate",
@@ -58,7 +62,10 @@ window.ASTRO_CATALOG = [
       "Source classification",
       "Chinese plates"
     ],
-    "shortTitleEn": "Deep Learning for Plate Registration"
+    "shortTitleEn": "Deep Learning for Plate Registration",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "global-plate-digitization-review",
@@ -84,7 +91,10 @@ window.ASTRO_CATALOG = [
       "Digitization",
       "International collaboration"
     ],
-    "shortTitleEn": "Global Plate Digitization"
+    "shortTitleEn": "Global Plate Digitization",
+    "countries": [
+      "fr"
+    ]
   },
   {
     "id": "new-shao-plate-digitizer",
@@ -110,7 +120,10 @@ window.ASTRO_CATALOG = [
       "Accuracy",
       "Plate preservation"
     ],
-    "shortTitleEn": "New SHAO Plate Digitizer"
+    "shortTitleEn": "New SHAO Plate Digitizer",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "china-plates",
@@ -119,7 +132,10 @@ window.ASTRO_CATALOG = [
     "authors": "Zheng-Jun Shang et al.",
     "year": 2024,
     "venue": "RAA · 24, 055010",
-    "categories": ["data", "astrometry"],
+    "categories": [
+      "data",
+      "astrometry"
+    ],
     "tags": [
       "中国底片",
       "Gaia",
@@ -135,6 +151,9 @@ window.ASTRO_CATALOG = [
       "Chinese plates",
       "Gaia",
       "Digitization"
+    ],
+    "countries": [
+      "cn"
     ]
   },
   {
@@ -161,7 +180,10 @@ window.ASTRO_CATALOG = [
       "Plate digitization",
       "International cooperation"
     ],
-    "shortTitleEn": "Chinese Plate Digitizers"
+    "shortTitleEn": "Chinese Plate Digitizers",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "multiple-exposure-plate-pipeline",
@@ -187,7 +209,10 @@ window.ASTRO_CATALOG = [
       "Plate archives",
       "Pipeline"
     ],
-    "shortTitleEn": "Multiple-Exposure Plate Pipeline"
+    "shortTitleEn": "Multiple-Exposure Plate Pipeline",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "naroo-digitization-center",
@@ -213,7 +238,10 @@ window.ASTRO_CATALOG = [
       "Digitization center",
       "Astrometry"
     ],
-    "shortTitleEn": "NAROO Digitization Center"
+    "shortTitleEn": "NAROO Digitization Center",
+    "countries": [
+      "fr"
+    ]
   },
   {
     "id": "ukrvo-catalogs",
@@ -239,7 +267,10 @@ window.ASTRO_CATALOG = [
       "Catalogs",
       "Plate archives"
     ],
-    "shortTitleEn": "UkrVO Plate Catalogs"
+    "shortTitleEn": "UkrVO Plate Catalogs",
+    "countries": [
+      "ua"
+    ]
   },
   {
     "id": "hudec-plate-archives",
@@ -265,7 +296,10 @@ window.ASTRO_CATALOG = [
       "Digitization",
       "Review"
     ],
-    "shortTitleEn": "Global Plate Archives: Status"
+    "shortTitleEn": "Global Plate Archives: Status",
+    "countries": [
+      "cz"
+    ]
   },
   {
     "id": "hudec-plate-astrophysics",
@@ -291,7 +325,10 @@ window.ASTRO_CATALOG = [
       "High-energy astrophysics",
       "Time domain"
     ],
-    "shortTitleEn": "Astrophysics with Plate Archives"
+    "shortTitleEn": "Astrophysics with Plate Archives",
+    "countries": [
+      "cz"
+    ]
   },
   {
     "id": "shao-plate-digitizer",
@@ -317,7 +354,10 @@ window.ASTRO_CATALOG = [
       "Performance test",
       "Shanghai Astronomical Observatory"
     ],
-    "shortTitleEn": "SHAO Plate Digitizer"
+    "shortTitleEn": "SHAO Plate Digitizer",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "pulkovo-double-stars",
@@ -343,7 +383,10 @@ window.ASTRO_CATALOG = [
       "Plate digitization",
       "Pulkovo"
     ],
-    "shortTitleEn": "Pulkovo Double-Star Plates"
+    "shortTitleEn": "Pulkovo Double-Star Plates",
+    "countries": [
+      "ru"
+    ]
   },
   {
     "id": "ukrainian-observatory-digitization",
@@ -369,7 +412,10 @@ window.ASTRO_CATALOG = [
       "Digitization",
       "UkrVO"
     ],
-    "shortTitleEn": "Digitizing Ukrainian Plates"
+    "shortTitleEn": "Digitizing Ukrainian Plates",
+    "countries": [
+      "ua"
+    ]
   },
   {
     "id": "dasch-century-window",
@@ -395,7 +441,10 @@ window.ASTRO_CATALOG = [
       "Time-domain astronomy",
       "Century-long plates"
     ],
-    "shortTitleEn": "A 100-Year Time-Domain Window"
+    "shortTitleEn": "A 100-Year Time-Domain Window",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "usno-starscan",
@@ -421,7 +470,10 @@ window.ASTRO_CATALOG = [
       "Plate measurement",
       "Calibration"
     ],
-    "shortTitleEn": "USNO StarScan"
+    "shortTitleEn": "USNO StarScan",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "dasch-ultrahigh-speed-digitizer",
@@ -447,7 +499,10 @@ window.ASTRO_CATALOG = [
       "DASCH",
       "Harvard plates"
     ],
-    "shortTitleEn": "HCO Ultrahigh-Speed Digitizer"
+    "shortTitleEn": "HCO Ultrahigh-Speed Digitizer",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "china-plate-photometry",
@@ -474,7 +529,10 @@ window.ASTRO_CATALOG = [
       "JKC",
       "Chinese plates"
     ],
-    "shortTitleEn": "Chinese Plate Photometric Calibration"
+    "shortTitleEn": "Chinese Plate Photometric Calibration",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "mff-net-plate-calibration",
@@ -501,7 +559,10 @@ window.ASTRO_CATALOG = [
       "MFF-Net",
       "Photometric calibration"
     ],
-    "shortTitleEn": "MFF-Net Plate Calibration"
+    "shortTitleEn": "MFF-Net Plate Calibration",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "applause-paper",
@@ -525,6 +586,9 @@ window.ASTRO_CATALOG = [
       "APPLAUSE",
       "PyPlate",
       "Virtual Observatory"
+    ],
+    "countries": [
+      "de"
     ]
   },
   {
@@ -549,6 +613,9 @@ window.ASTRO_CATALOG = [
       "DASCH",
       "DR7",
       "Long-term variability"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -575,7 +642,11 @@ window.ASTRO_CATALOG = [
       "Photometry",
       "Astrometry"
     ],
-    "shortTitleEn": "FON-KITAB Plate Processing"
+    "shortTitleEn": "FON-KITAB Plate Processing",
+    "countries": [
+      "uz",
+      "ua"
+    ]
   },
   {
     "id": "dasch-photometry-pipeline",
@@ -601,7 +672,10 @@ window.ASTRO_CATALOG = [
       "Photometry",
       "Light curves"
     ],
-    "shortTitleEn": "DASCH Photometry Improvements"
+    "shortTitleEn": "DASCH Photometry Improvements",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "ubai-plate-archive",
@@ -627,7 +701,10 @@ window.ASTRO_CATALOG = [
       "UBAI",
       "Processing pipeline"
     ],
-    "shortTitleEn": "UBAI Plate Archive"
+    "shortTitleEn": "UBAI Plate Archive",
+    "countries": [
+      "uz"
+    ]
   },
   {
     "id": "pallas-vesta-plates",
@@ -653,7 +730,10 @@ window.ASTRO_CATALOG = [
       "Gaia DR3",
       "Chinese plates"
     ],
-    "shortTitleEn": "Pallas & Vesta Plate Reduction"
+    "shortTitleEn": "Pallas & Vesta Plate Reduction",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "carte-du-ciel-gaia",
@@ -679,7 +759,10 @@ window.ASTRO_CATALOG = [
       "Gaia DR1",
       "Astrometric calibration"
     ],
-    "shortTitleEn": "Carte du Ciel with Gaia DR1"
+    "shortTitleEn": "Carte du Ciel with Gaia DR1",
+    "countries": [
+      "fi"
+    ]
   },
   {
     "id": "ukrvo-pluto-plates",
@@ -705,7 +788,10 @@ window.ASTRO_CATALOG = [
       "UkrVO",
       "Plate processing"
     ],
-    "shortTitleEn": "UkrVO Pluto Plate Processing"
+    "shortTitleEn": "UkrVO Pluto Plate Processing",
+    "countries": [
+      "ua"
+    ]
   },
   {
     "id": "dasch-astrometry",
@@ -729,6 +815,9 @@ window.ASTRO_CATALOG = [
       "WCS",
       "Distortion correction",
       "DASCH"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -755,7 +844,11 @@ window.ASTRO_CATALOG = [
       "Jovian satellites",
       "Historical plates"
     ],
-    "shortTitleEn": "DAMIAN Jovian Reduction"
+    "shortTitleEn": "DAMIAN Jovian Reduction",
+    "countries": [
+      "fr",
+      "be"
+    ]
   },
   {
     "id": "astrometry-paper",
@@ -779,6 +872,9 @@ window.ASTRO_CATALOG = [
       "Blind solving",
       "Pattern matching",
       "Foundational method"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -805,7 +901,10 @@ window.ASTRO_CATALOG = [
       "Astrometry",
       "Survey"
     ],
-    "shortTitleEn": "SuperCOSMOS III: Astrometry"
+    "shortTitleEn": "SuperCOSMOS III: Astrometry",
+    "countries": [
+      "uk"
+    ]
   },
   {
     "id": "supercosmos-precision",
@@ -831,7 +930,10 @@ window.ASTRO_CATALOG = [
       "Microdensitometer",
       "Positional accuracy"
     ],
-    "shortTitleEn": "Precision Astrometry with SuperCOSMOS"
+    "shortTitleEn": "Precision Astrometry with SuperCOSMOS",
+    "countries": [
+      "uk"
+    ]
   },
   {
     "id": "dasch-kgiants",
@@ -855,6 +957,9 @@ window.ASTRO_CATALOG = [
       "Variable stars",
       "K giants",
       "Long-term variability"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -880,7 +985,10 @@ window.ASTRO_CATALOG = [
       "M44",
       "DASCH"
     ],
-    "venueEn": "arXiv · First posted in 2008"
+    "venueEn": "arXiv · First posted in 2008",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "supercosmos-1",
@@ -904,6 +1012,9 @@ window.ASTRO_CATALOG = [
       "SuperCOSMOS",
       "Photographic surveys",
       "Digitization"
+    ],
+    "countries": [
+      "uk"
     ]
   },
   {
@@ -928,6 +1039,9 @@ window.ASTRO_CATALOG = [
       "Source detection",
       "Photometry",
       "SuperCOSMOS"
+    ],
+    "countries": [
+      "uk"
     ]
   },
   {
@@ -954,7 +1068,10 @@ window.ASTRO_CATALOG = [
       "Photographic surveys",
       "Data distribution"
     ],
-    "shortTitleEn": "Digitizing Large Surveys"
+    "shortTitleEn": "Digitizing Large Surveys",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "aps-poss-catalog",
@@ -980,7 +1097,562 @@ window.ASTRO_CATALOG = [
       "Palomar Sky Survey",
       "Catalogs"
     ],
-    "shortTitleEn": "APS POSS Catalog"
+    "shortTitleEn": "APS POSS Catalog",
+    "countries": [
+      "us"
+    ]
+  },
+  {
+    "id": "epson-10000xl-plate-digitization",
+    "title": "The astrometric and photometric results of digitized plates on Epson Expression 10000XL scanner with different resolutions",
+    "shortTitle": "Epson 10000XL 扫描分辨率评估",
+    "description": "比较 Epson Expression 10000XL 平板扫描仪在不同分辨率与灰度位深下数字化底片的天体测量与测光结果，发现 1200 dpi、16 位灰度最优，位置与星等精度约 0.07″ 与 0.13 mag。",
+    "authors": "Q. Yuldoshev et al.",
+    "year": 2019,
+    "venue": "Odessa Astron. Publ. · 32, 208",
+    "category": "data",
+    "tags": [
+      "扫描仪",
+      "分辨率",
+      "精度"
+    ],
+    "url": "https://doi.org/10.18524/1810-4215.2019.32.181734",
+    "citationAuthor": "Q. Yuldoshev and V. Andruk and M. Muminov",
+    "doi": "10.18524/1810-4215.2019.32.181734",
+    "kind": "paper",
+    "descriptionEn": "Compares the astrometric and photometric results of plates digitized with an Epson Expression 10000XL flatbed scanner at different resolutions and gray levels, finding 1200 dpi and 16-bit gray optimal, with about 0.07 arcsec positional and 0.13 mag photometric accuracy.",
+    "tagsEn": [
+      "Scanner",
+      "Resolution",
+      "Accuracy"
+    ],
+    "shortTitleEn": "Epson 10000XL Scanning Test",
+    "countries": [
+      "uz"
+    ]
+  },
+  {
+    "id": "hudec-us-plate-archives",
+    "title": "Finding hidden treasures: investigations in US astronomical plate archives",
+    "shortTitle": "美国底片档案调查",
+    "description": "调查美国多个天文台底片档案的保存状况，并测试可运输扫描设备用于现场数字化的可行性。",
+    "authors": "René Hudec & Lukáš Hudec",
+    "year": 2013,
+    "venue": "Acta Polytech. · 53",
+    "category": "data",
+    "tags": [
+      "美国底片",
+      "档案调查",
+      "便携扫描"
+    ],
+    "url": "https://doi.org/10.14311/1702",
+    "citationAuthor": "René Hudec and Lukáš Hudec",
+    "doi": "10.14311/1702",
+    "kind": "paper",
+    "descriptionEn": "Reports an investigation of US astronomical plate archives and tests of transportable scanning devices for in situ digitization of archival plates.",
+    "tagsEn": [
+      "US plates",
+      "Archive survey",
+      "Transportable scanner"
+    ],
+    "shortTitleEn": "US Plate Archive Survey",
+    "countries": [
+      "cz"
+    ]
+  },
+  {
+    "id": "hudec-us-archives-high-energy",
+    "title": "US astronomical photographic data archives: hidden treasures and importance for high-energy astrophysics",
+    "shortTitle": "美国底片档案与高能天体物理",
+    "description": "在 2013 年调查的基础上，强调美国照相底片档案对高能天体物理（暂现源与长期光变）的价值，并继续测试现场数字化设备。",
+    "authors": "René Hudec & Lukáš Hudec",
+    "year": 2014,
+    "venue": "Acta Polytech. CTU Proc. · 1, 316",
+    "category": "data",
+    "tags": [
+      "美国底片",
+      "高能天体",
+      "数字化"
+    ],
+    "url": "https://doi.org/10.14311/app.2014.01.0316",
+    "citationAuthor": "René Hudec and Lukáš Hudec",
+    "doi": "10.14311/app.2014.01.0316",
+    "kind": "paper",
+    "descriptionEn": "Extends the US plate-archive survey with emphasis on high-energy astrophysics, including transient and long-term variability studies, and on transportable digitization equipment.",
+    "tagsEn": [
+      "US plates",
+      "High-energy astrophysics",
+      "Digitization"
+    ],
+    "shortTitleEn": "US Archives and High-Energy Astrophysics",
+    "countries": [
+      "cz"
+    ]
+  },
+  {
+    "id": "plate-ccd-catalog-compilation",
+    "title": "Compiling catalogs of stellar coordinates and proper motions via coprocessing of archival photographic and modern CCD observations",
+    "shortTitle": "底片与 CCD 联合编制星表",
+    "description": "把档案底片与现代 CCD 观测联合处理，编制恒星坐标与自行星表；介绍 MIDAS/ROMAFOT 处理流程与 PlateGraf 软件，位置残差约 40–100 mas。",
+    "authors": "Yu. I. Protsyuk et al.",
+    "year": 2014,
+    "venue": "Kin. Phys. Celest. Bodies · 30, 296",
+    "category": "astrometry",
+    "tags": [
+      "底片+CCD",
+      "自行",
+      "星表"
+    ],
+    "url": "https://doi.org/10.3103/s0884591314060051",
+    "citationAuthor": "Yu. I. Protsyuk and M. V. Martynov and A. E. Mazhaev and O. E. Kovylianska and S. V. Protsyuk and V. N. Andruk",
+    "doi": "10.3103/s0884591314060051",
+    "kind": "paper",
+    "descriptionEn": "Combines archival photographic plates with modern CCD observations to compile catalogs of stellar coordinates and proper motions, describing the MIDAS/ROMAFOT processing chain and the PlateGraf software, with plate-to-catalog residuals of about 40–100 mas.",
+    "tagsEn": [
+      "Plates + CCD",
+      "Proper motions",
+      "Catalogs"
+    ],
+    "shortTitleEn": "Plate + CCD Catalog Compilation",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "fon-asteroid-catalogue",
+    "title": "Catalogue of asteroids from digitized photographic plates of the FON program",
+    "shortTitle": "FON 项目小行星星表",
+    "description": "基于 FON 项目数字化底片编制小行星星表，给出位置与星等的测量流程和结果。",
+    "authors": "S. V. Shatokhina et al.",
+    "year": 2018,
+    "venue": "Kin. Phys. Celest. Bodies · 34, 270",
+    "category": "astrometry",
+    "tags": [
+      "小行星",
+      "FON",
+      "星表"
+    ],
+    "url": "https://doi.org/10.3103/s0884591318050045",
+    "citationAuthor": "S. V. Shatokhina and L. V. Kazantseva and O. M. Yizhakevych and V. M. Andruk",
+    "doi": "10.3103/s0884591318050045",
+    "kind": "paper",
+    "descriptionEn": "Compiles a catalogue of asteroids from digitized photographic plates of the FON program, describing the measurement pipeline and the resulting positions and magnitudes.",
+    "tagsEn": [
+      "Asteroids",
+      "FON",
+      "Catalogue"
+    ],
+    "shortTitleEn": "FON Asteroid Catalogue",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "fon-ubai-southern-zones",
+    "title": "The equatorial coordinates and B-magnitudes of the stars in the southern hemisphere zones based on the digitized astronegatives of FON project at the Ulugh Beg Astronomical Institute",
+    "shortTitle": "FON 南天区星表（UBAI）",
+    "description": "利用乌兹别克斯坦乌鲁伯格天文研究所 FON 项目的数字化底片，编制南天区恒星的赤道坐标与 B 星等。",
+    "authors": "Q. X. Yuldoshev et al.",
+    "year": 2016,
+    "venue": "Odessa Astron. Publ. · 29, 160",
+    "category": "astrometry",
+    "tags": [
+      "FON",
+      "乌兹别克斯坦",
+      "星表"
+    ],
+    "url": "https://doi.org/10.18524/1810-4215.2016.29.85182",
+    "citationAuthor": "Q. X. Yuldoshev and M. M. Muminov and Sh. A. Ehgamberdiev and O. U. Usmanov and H. Relke and Yu. I. Protsyuk and O. E. Kovylianska and S. V. Protsyuk and V. N. Andruk",
+    "doi": "10.18524/1810-4215.2016.29.85182",
+    "kind": "paper",
+    "descriptionEn": "Derives equatorial coordinates and B-magnitudes for stars in southern-hemisphere zones from digitized FON project plates at the Ulugh Beg Astronomical Institute in Uzbekistan.",
+    "tagsEn": [
+      "FON",
+      "Uzbekistan",
+      "Catalogue"
+    ],
+    "shortTitleEn": "FON Southern Zones at UBAI",
+    "countries": [
+      "uz"
+    ]
+  },
+  {
+    "id": "fon-project-star-catalog",
+    "title": "Catalog of equatorial coordinates and B-magnitudes of stars of the FON project",
+    "shortTitle": "FON 项目恒星位置星表",
+    "description": "介绍 FON 项目恒星赤道坐标与 B 星等星表的编制方法与结果。",
+    "authors": "V. M. Andruk et al.",
+    "year": 2016,
+    "venue": "Kin. Phys. Celest. Bodies · 32, 260",
+    "category": "astrometry",
+    "tags": [
+      "FON",
+      "星表",
+      "B 星等"
+    ],
+    "url": "https://doi.org/10.3103/S0884591316050032",
+    "citationAuthor": "V. M. Andruk and L. K. Pakuliak and V. V. Golovnia and G. O. Ivanov and A. I. Yatsenko and S. V. Shatokhina and O. M. Yizhakevych",
+    "doi": "10.3103/S0884591316050032",
+    "kind": "paper",
+    "descriptionEn": "Presents the catalog of equatorial coordinates and B-magnitudes of stars from the FON project, with its reduction method and resulting accuracy.",
+    "tagsEn": [
+      "FON",
+      "Catalogue",
+      "B magnitudes"
+    ],
+    "shortTitleEn": "FON Star Catalog",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "interamnia-gaia-dr2-reduction",
+    "title": "Re-reduction of the old photographic observations of Interamnia (704) based on Gaia DR2 reference catalogue",
+    "shortTitle": "Interamnia 旧底片 Gaia DR2 重归算",
+    "description": "用 Gaia DR2 重新归算小行星 (704) Interamnia 的历史照相观测，并比较 Epson 与 SHAO 扫描图像对精度的提升。",
+    "authors": "Yu. I. Protsyuk et al.",
+    "year": 2020,
+    "venue": "Odessa Astron. Publ. · 33, 147",
+    "category": "astrometry",
+    "tags": [
+      "小行星",
+      "Gaia DR2",
+      "重归算"
+    ],
+    "url": "https://doi.org/10.18524/1810-4215.2020.33.216407",
+    "citationAuthor": "Yu. I. Protsyuk and N. V. Maigurova",
+    "doi": "10.18524/1810-4215.2020.33.216407",
+    "kind": "paper",
+    "descriptionEn": "Re-reduces historical photographic observations of asteroid (704) Interamnia against Gaia DR2, comparing the improvement obtained from Epson-scanned and SHAO-scanned images.",
+    "tagsEn": [
+      "Asteroid",
+      "Gaia DR2",
+      "Re-reduction"
+    ],
+    "shortTitleEn": "Interamnia Gaia DR2 Reduction",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "saturnian-satellites-plates",
+    "title": "New astrometric measurement and reduction of USNO photographic observations of the main Saturnian satellites: 1974–1998",
+    "shortTitle": "土星卫星 USNO 底片重归算",
+    "description": "用 DAMIAN 数字化仪重新测量并归算 USNO 1974–1998 年土星主要卫星的照相底片，改进卫星运动模型。",
+    "authors": "V. Robert et al.",
+    "year": 2016,
+    "venue": "A&A · 596, A37",
+    "category": "astrometry",
+    "tags": [
+      "土星卫星",
+      "USNO",
+      "重归算"
+    ],
+    "url": "https://doi.org/10.1051/0004-6361/201629807",
+    "citationAuthor": "V. Robert and D. Pascu and V. Lainey and J.-E. Arlot and J.-P. De Cuyper and V. Dehant and W. Thuillot",
+    "doi": "10.1051/0004-6361/201629807",
+    "kind": "paper",
+    "descriptionEn": "Re-measures and reduces USNO photographic observations of the main Saturnian satellites from 1974–1998 with the DAMIAN digitizer, improving the satellites dynamical model.",
+    "tagsEn": [
+      "Saturnian satellites",
+      "USNO",
+      "Re-reduction"
+    ],
+    "shortTitleEn": "Saturnian Satellites Plates",
+    "countries": [
+      "fr"
+    ]
+  },
+  {
+    "id": "phobos-deimos-plates",
+    "title": "Astrometric observations of Phobos and Deimos during the 1971 opposition of Mars",
+    "shortTitle": "1971 年火卫底片观测",
+    "description": "处理 1971 年火星冲日期间火卫一、火卫二的照相观测，给出天体测量方法与结果，是后续卫星底片归算的方法基础。",
+    "authors": "V. Robert et al.",
+    "year": 2014,
+    "venue": "A&A · 572, A104",
+    "category": "astrometry",
+    "tags": [
+      "火卫",
+      "底片测量",
+      "天体测量"
+    ],
+    "url": "https://doi.org/10.1051/0004-6361/201424384",
+    "citationAuthor": "V. Robert and V. Lainey and D. Pascu and J.-E. Arlot and J.-P. De Cuyper and V. Dehant and W. Thuillot",
+    "doi": "10.1051/0004-6361/201424384",
+    "kind": "paper",
+    "descriptionEn": "Presents astrometric observations of Phobos and Deimos during the 1971 opposition of Mars, including the measurement and reduction methods used for the plates.",
+    "tagsEn": [
+      "Phobos and Deimos",
+      "Plate measurement",
+      "Astrometry"
+    ],
+    "shortTitleEn": "1971 Phobos/Deimos Plates",
+    "countries": [
+      "fr"
+    ]
+  },
+  {
+    "id": "pulkovo-asteroid-plates",
+    "title": "A new reduction of digitized photographic plates with selected asteroids obtained with the normal astrograph of the Pulkovo Observatory from 1948 to 1990",
+    "shortTitle": "普尔科沃小行星底片重归算",
+    "description": "对普尔科沃天文台 1948–1990 年正常天体照相仪拍摄的 1545 张底片中的选中小行星重新归算，分析匹配系统差并用残差分布修正赤经赤纬。",
+    "authors": "A. A. Berezhnoi",
+    "year": 2013,
+    "venue": "Sol. Syst. Res. · 47, 203",
+    "category": "astrometry",
+    "tags": [
+      "普尔科沃",
+      "小行星",
+      "系统差"
+    ],
+    "url": "https://doi.org/10.1134/S0038094613020019",
+    "citationAuthor": "A. A. Berezhnoi",
+    "doi": "10.1134/S0038094613020019",
+    "kind": "paper",
+    "descriptionEn": "Re-reduces 1,545 digitized plates with selected asteroids taken with the Pulkovo normal astrograph between 1948 and 1990, analysing matching systematics and correcting right ascension and declination from residual distributions.",
+    "tagsEn": [
+      "Pulkovo",
+      "Asteroids",
+      "Systematic errors"
+    ],
+    "shortTitleEn": "Pulkovo Asteroid Plates",
+    "countries": [
+      "ru"
+    ]
+  },
+  {
+    "id": "microtek-scanmaker-plate-photometry",
+    "title": "Photometry of plates digitized using Microtek ScanMaker 9800XL TMA scanner",
+    "shortTitle": "Microtek 扫描仪底片测光",
+    "description": "评估 Microtek ScanMaker 9800XL TMA 扫描仪数字化底片的测光精度（约 ±0.05 mag），并分析扫描模式、底片材料、望远镜参数与参考星表等误差来源。",
+    "authors": "V. M. Andruk et al.",
+    "year": 2010,
+    "venue": "Kin. Phys. Celest. Bodies · 26, 146",
+    "category": "photometry",
+    "tags": [
+      "Microtek",
+      "测光",
+      "扫描仪"
+    ],
+    "url": "https://doi.org/10.3103/s0884591310030062",
+    "citationAuthor": "V. M. Andruk and G. Z. Butenko and A. I. Yatsenko",
+    "doi": "10.3103/s0884591310030062",
+    "kind": "paper",
+    "descriptionEn": "Assesses the photometric accuracy achievable with plates digitized by a Microtek ScanMaker 9800XL TMA scanner (about ±0.05 mag) and analyses error sources including scanning mode, plate material, telescope parameters, and reference catalog.",
+    "tagsEn": [
+      "Microtek",
+      "Photometry",
+      "Scanner"
+    ],
+    "shortTitleEn": "Microtek Scanner Photometry",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "star-photometry-digitized-astronegatives",
+    "title": "About star photometry on digitized astronegatives",
+    "shortTitle": "数字化底片恒星测光方法",
+    "description": "讨论数字化底片上的恒星测光方法：仪器星等与参考星等的关系、特征曲线与平场处理，并给出多台站底片的测光结果。",
+    "authors": "V. M. Andruk et al.",
+    "year": 2017,
+    "venue": "Sci. Innov. · 13, 15",
+    "category": "photometry",
+    "tags": [
+      "测光",
+      "底片",
+      "方法"
+    ],
+    "url": "https://doi.org/10.15407/scine13.01.015",
+    "citationAuthor": "V. M. Andruk and L. K. Pakuliak and V. V. Golovnia and S. V. Shatokhina and O. M. Yizhakevych and Yu. I. Protsyuk and I. Eglitis and M. Eglite and L. V. Kazantseva and H. Relke and Q. K. Yuldoshev and M. M. Muminov",
+    "doi": "10.15407/scine13.01.015",
+    "kind": "paper",
+    "descriptionEn": "Discusses star photometry on digitized astronegatives, covering the relation between instrumental and reference magnitudes, characteristic curves and flat-field treatment, with results from several plate collections.",
+    "tagsEn": [
+      "Photometry",
+      "Plates",
+      "Methods"
+    ],
+    "shortTitleEn": "Photometry on Digitized Astronegatives",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "baldone-schmidt-u-values",
+    "title": "U-values of stars and galaxies from digitized astronomic negatives obtained by Baldone Schmidt telescope",
+    "shortTitle": "Baldone Schmidt U 波段星等",
+    "description": "处理 Baldone Schmidt 望远镜的数字化底片，给出恒星与星系的 U 波段星等。",
+    "authors": "I. Eglitis et al.",
+    "year": 2016,
+    "venue": "Bull. Kyiv Univ. Astron. · 54, 21",
+    "category": "photometry",
+    "tags": [
+      "Baldone",
+      "U 波段",
+      "测光"
+    ],
+    "url": "https://doi.org/10.17721/btsnua.2016.54.21-24",
+    "citationAuthor": "I. Eglitis and M. Eglite and V. Andruk and L. Pakuliak",
+    "doi": "10.17721/btsnua.2016.54.21-24",
+    "kind": "paper",
+    "descriptionEn": "Derives U-band magnitudes of stars and galaxies from digitized astronomical negatives obtained with the Baldone Schmidt telescope.",
+    "tagsEn": [
+      "Baldone",
+      "U band",
+      "Photometry"
+    ],
+    "shortTitleEn": "Baldone U-band Photometry",
+    "countries": [
+      "lv",
+      "ua"
+    ]
+  },
+  {
+    "id": "single-exposure-plate-photometry",
+    "title": "Photometry of stars for astronegatives with a single exposure",
+    "shortTitle": "单次曝光底片恒星测光",
+    "description": "针对单次曝光底片的恒星测光方法，讨论仪器星等归算与参考星表定标。",
+    "authors": "V. Andruk et al.",
+    "year": 2019,
+    "venue": "Odessa Astron. Publ. · 32, 181",
+    "category": "photometry",
+    "tags": [
+      "单次曝光",
+      "测光",
+      "定标"
+    ],
+    "url": "https://doi.org/10.18524/1810-4215.2019.32.181596",
+    "citationAuthor": "V. Andruk and I. Eglitis and Yu. Protsyuk and V. Akhmetov and L. Pakuliak and S. Shatokhina and O. Yizhakevych",
+    "doi": "10.18524/1810-4215.2019.32.181596",
+    "kind": "paper",
+    "descriptionEn": "Presents the photometry of stars on single-exposure astronegatives, including instrumental-magnitude reduction and calibration against reference catalogs.",
+    "tagsEn": [
+      "Single exposure",
+      "Photometry",
+      "Calibration"
+    ],
+    "shortTitleEn": "Single-Exposure Plate Photometry",
+    "countries": [
+      "ua"
+    ]
+  },
+  {
+    "id": "hudec-magnitude-estimation",
+    "title": "Note on magnitude estimation on digitized astronomical photographic plates",
+    "shortTitle": "数字化底片星等目视估计",
+    "description": "提出一种快速肉眼估计数字化底片星等的方法，并用数百张底片上造父变星的光变曲线验证其与仪器测量的一致性。",
+    "authors": "R. Hudec & E. Splittgerber",
+    "year": 2020,
+    "venue": "Contrib. Astron. Obs. Skalnaté Pleso · 50",
+    "category": "photometry",
+    "tags": [
+      "星等估计",
+      "目视",
+      "底片"
+    ],
+    "url": "https://doi.org/10.31577/caosp.2020.50.3.704",
+    "citationAuthor": "R. Hudec and E. Splittgerber",
+    "doi": "10.31577/caosp.2020.50.3.704",
+    "kind": "paper",
+    "descriptionEn": "Proposes a fast visual method for estimating magnitudes on digitized photographic plates and validates it against instrumental measurements using Cepheid light curves from several hundred plates.",
+    "tagsEn": [
+      "Magnitude estimation",
+      "Visual",
+      "Plates"
+    ],
+    "shortTitleEn": "Visual Magnitude Estimation",
+    "countries": [
+      "cz"
+    ]
+  },
+  {
+    "id": "sonneberg-patrol-photometry",
+    "title": "A photometric pilot study on Sonneberg archival patrol plates",
+    "shortTitle": "Sonneberg 巡天底片测光试点",
+    "description": "以 Sonneberg 天文台巡天底片为样本开展测光试点研究，评估历史底片用于长期光变研究的可行性。",
+    "authors": "N. Vogt et al.",
+    "year": 2004,
+    "venue": "A&A · 428, 925",
+    "category": "photometry",
+    "tags": [
+      "Sonneberg",
+      "巡天底片",
+      "光变"
+    ],
+    "url": "https://doi.org/10.1051/0004-6361:20040457",
+    "citationAuthor": "N. Vogt and P. Kroll and E. Splittgerber",
+    "doi": "10.1051/0004-6361:20040457",
+    "kind": "paper",
+    "descriptionEn": "A photometric pilot study on Sonneberg archival patrol plates that assesses the feasibility of using historical plates for long-term variability research.",
+    "tagsEn": [
+      "Sonneberg",
+      "Patrol plates",
+      "Variability"
+    ],
+    "shortTitleEn": "Sonneberg Patrol Plate Photometry",
+    "countries": [
+      "de"
+    ]
+  },
+  {
+    "id": "hamburg-plate-archives",
+    "title": "Hamburger Sternwarte plate archives: historic long-term variability study of active galaxies based on digitized photographic plates",
+    "shortTitle": "汉堡天文台底片与活动星系",
+    "description": "介绍汉堡天文台 4.5 万余张底片的数字化与在线发布（3.1 万余张已上线），并用 PyPlate 流程处理，研究活动星系的长期光变。",
+    "authors": "M. Wertz et al.",
+    "year": 2017,
+    "venue": "AN · 338, 103",
+    "category": "photometry",
+    "tags": [
+      "汉堡底片",
+      "活动星系",
+      "长期光变"
+    ],
+    "url": "https://doi.org/10.1002/asna.201613201",
+    "citationAuthor": "M. Wertz and D. Horns and D. Groote and T. Tuvikene and S. Czesla and J. H. M. M. Schmitt",
+    "doi": "10.1002/asna.201613201",
+    "kind": "paper",
+    "descriptionEn": "Describes the digitization and online release of more than 45,000 Hamburg observatory plates, their PyPlate-based processing, and a historic long-term variability study of active galaxies.",
+    "tagsEn": [
+      "Hamburg plates",
+      "Active galaxies",
+      "Long-term variability"
+    ],
+    "shortTitleEn": "Hamburg Plate Archives",
+    "countries": [
+      "de"
+    ]
+  },
+  {
+    "id": "photometrypipeline",
+    "title": "PHOTOMETRYPIPELINE: An automated pipeline for calibrated photometry",
+    "shortTitle": "自动化定标测光流水线",
+    "description": "介绍一套自动化的定标测光流水线，可对图像完成源检测、参考星匹配与测光定标，也适用于历史底片图像。",
+    "authors": "M. Mommert",
+    "year": 2017,
+    "venue": "A&C · 18, 47",
+    "category": "photometry",
+    "tags": [
+      "流水线",
+      "定标测光",
+      "自动化"
+    ],
+    "url": "https://doi.org/10.1016/j.ascom.2016.11.002",
+    "citationAuthor": "M. Mommert",
+    "doi": "10.1016/j.ascom.2016.11.002",
+    "kind": "paper",
+    "descriptionEn": "Presents an automated pipeline for calibrated photometry that performs source detection, reference-star matching, and photometric calibration, applicable to historical plate images as well.",
+    "tagsEn": [
+      "Pipeline",
+      "Calibrated photometry",
+      "Automation"
+    ],
+    "shortTitleEn": "PHOTOMETRYPIPELINE",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "dasch",
@@ -1000,6 +1672,9 @@ window.ASTRO_CATALOG = [
       "Archive",
       "DR7",
       "Light curves"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1020,6 +1695,9 @@ window.ASTRO_CATALOG = [
       "Archive",
       "European collections",
       "Calibration"
+    ],
+    "countries": [
+      "de"
     ]
   },
   {
@@ -1040,6 +1718,9 @@ window.ASTRO_CATALOG = [
       "Harvard plates",
       "Observing logs",
       "Search"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1062,7 +1743,10 @@ window.ASTRO_CATALOG = [
       "Catalogs"
     ],
     "titleEn": "Digitized Chinese Astronomical Plates",
-    "authorsEn": "National Astronomical Data Center"
+    "authorsEn": "National Astronomical Data Center",
+    "countries": [
+      "cn"
+    ]
   },
   {
     "id": "pyplate",
@@ -1082,6 +1766,9 @@ window.ASTRO_CATALOG = [
       "Python",
       "Pipeline",
       "Calibration"
+    ],
+    "countries": [
+      "ee"
     ]
   },
   {
@@ -1103,7 +1790,10 @@ window.ASTRO_CATALOG = [
       "Digitization",
       "Instrumentation"
     ],
-    "authorsEn": "DASCH · Technical documentation"
+    "authorsEn": "DASCH · Technical documentation",
+    "countries": [
+      "us"
+    ]
   },
   {
     "id": "astrometry-net",
@@ -1123,6 +1813,9 @@ window.ASTRO_CATALOG = [
       "Blind solving",
       "WCS",
       "Registration"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1143,6 +1836,9 @@ window.ASTRO_CATALOG = [
       "Python",
       "FITS",
       "Coordinates"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1163,6 +1859,9 @@ window.ASTRO_CATALOG = [
       "Source detection",
       "Catalogs",
       "Photometry"
+    ],
+    "countries": [
+      "fr"
     ]
   },
   {
@@ -1183,6 +1882,9 @@ window.ASTRO_CATALOG = [
       "Python",
       "PSF",
       "Aperture photometry"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1203,6 +1905,9 @@ window.ASTRO_CATALOG = [
       "FITS",
       "Visualization",
       "Quality control"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1223,6 +1928,9 @@ window.ASTRO_CATALOG = [
       "Sky atlas",
       "Cross-matching",
       "Visualization"
+    ],
+    "countries": [
+      "fr"
     ]
   },
   {
@@ -1243,6 +1951,9 @@ window.ASTRO_CATALOG = [
       "Period analysis",
       "Time series",
       "Python"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1263,6 +1974,9 @@ window.ASTRO_CATALOG = [
       "FITS",
       "WCS",
       "Data standards"
+    ],
+    "countries": [
+      "us"
     ]
   },
   {
@@ -1283,6 +1997,7 @@ window.ASTRO_CATALOG = [
       "Virtual Observatory",
       "Data publication",
       "Standards"
-    ]
+    ],
+    "countries": []
   }
 ];
