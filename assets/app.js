@@ -19,7 +19,8 @@
     tool:'<path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18"/>',
     standard:'<path d="M4 3h12l4 4v14H4zM8 10h8M8 14h8M8 18h5"/>',
     close:'<path d="m6 6 12 12M18 6 6 18"/>',
-    menu:'<path d="M4 6h16M4 12h16M4 18h16"/>'
+    menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+    globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'
   };
   const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.paper}</svg>`;
   const categories = [
@@ -27,6 +28,13 @@
   ];
   const legacyCategories = {digitization:'data',archives:'data',ai:'astrometry',timedomain:'photometry'};
   const normCategory = id => legacyCategories[id] || id;
+  const countries = [
+    ['cn','中国','China'], ['us','美国','United States'], ['uk','英国','United Kingdom'],
+    ['de','德国','Germany'], ['fr','法国','France'], ['be','比利时','Belgium'],
+    ['ua','乌克兰','Ukraine'], ['uz','乌兹别克斯坦','Uzbekistan'], ['ru','俄罗斯','Russia'],
+    ['cz','捷克','Czechia'], ['fi','芬兰','Finland'], ['ee','爱沙尼亚','Estonia'], ['lv','拉脱维亚','Latvia']
+  ];
+  const countryName = code => countries.find(c => c[0] === code)?.[1] || '';
   const kinds = {paper:'研究论文',tool:'工具 / 技术',archive:'数据档案',standard:'标准规范'};
   const kindTabs = {all:'全部',paper:'论文',tool:'工具',archive:'数据',standard:'规范'};
   const pathKey = location.pathname.replace(/index\.html$/, '');
@@ -56,15 +64,19 @@
       if (!Array.isArray(rawCategories) || rawCategories.length < 1 || rawCategories.length > categories.length) throw new Error('条目主题必须填写一到三个类别。');
       const entryCategories = [...new Set(rawCategories.map(normCategory))];
       if (entryCategories.some(c => !categories.some(([id]) => id === c))) throw new Error('条目主题必须是 data、astrometry 或 photometry。');
+      const rawCountries = item.countries === undefined ? [] : item.countries;
+      if (!Array.isArray(rawCountries) || rawCountries.length > 3 || rawCountries.some(c => !countries.some(([id]) => id === c))) throw new Error('条目国家无效。');
+      const entryCountries = [...new Set(rawCountries)];
       if (!Object.hasOwn(kinds,item.kind) || !safeUrl(item.url)) throw new Error('条目类型或网址无效。');
       if (item.year !== undefined && (!Number.isInteger(item.year) || item.year < 1800 || item.year > 2100)) throw new Error('年份应介于 1800 与 2100 之间。');
       if (!Array.isArray(item.tags) || item.tags.length > 12 || item.tags.some(t => typeof t !== 'string' || t.length > 80)) throw new Error('标签格式无效。');
       for (const field of ['project','code']) if (item[field] && !safeUrl(item[field])) throw new Error('项目或代码链接无效。');
       const clean = {};
-      for (const field of ['id','title','description','authors','url','kind','category','categories','year','tags','shortTitle','venue','project','code','citationAuthor','doi','eprint','featured','titleEn','shortTitleEn','descriptionEn','authorsEn','venueEn','tagsEn']) if (item[field] !== undefined) clean[field] = item[field];
-      // 统一存为数组：category 保持主类别，categories 列出全部所属板块。
+      for (const field of ['id','title','description','authors','url','kind','category','categories','countries','year','tags','shortTitle','venue','project','code','citationAuthor','doi','eprint','featured','titleEn','shortTitleEn','descriptionEn','authorsEn','venueEn','tagsEn']) if (item[field] !== undefined) clean[field] = item[field];
+      // 统一存为数组：category 保持主类别，categories 列出全部所属板块，countries 列出所属国家。
       clean.category = entryCategories[0];
       clean.categories = entryCategories;
+      clean.countries = entryCountries;
       for (const field of ['titleEn','shortTitleEn','descriptionEn','authorsEn','venueEn']) if (clean[field] !== undefined && (typeof clean[field] !== 'string' || clean[field].length > 5000)) throw new Error('English field is invalid.');
       if (clean.tagsEn !== undefined && (!Array.isArray(clean.tagsEn) || clean.tagsEn.length > 12 || clean.tagsEn.some(t => typeof t !== 'string' || t.length > 80))) throw new Error('English tags are invalid.');
       for (const field of ['shortTitle','venue','project','code','citationAuthor','doi','eprint']) if (clean[field] !== undefined && (typeof clean[field] !== 'string' || clean[field].length > 5000)) throw new Error('附加字段格式无效。');
@@ -77,7 +89,7 @@
   let saved = new Set(Array.isArray(persisted.saved) ? persisted.saved.filter(id => catalog.some(e => e.id === id)) : []);
   let theme = persisted.theme === 'dark' ? 'dark' : 'light';
   let view = persisted.view === 'list' ? 'list' : 'grid';
-  let route = 'overview', category = '', kind = 'all', query = '', sort = 'recommended', toastTimer;
+  let route = 'overview', category = '', country = '', kind = 'all', query = '', sort = 'recommended', toastTimer;
   const config = window.ASTRO_CONFIG;
   function persist() { try { localStorage.setItem(key, JSON.stringify({saved:[...saved],theme,view})); return true; } catch { toast('浏览器无法记住偏好；本次访问仍可正常浏览。'); return false; } }
   function toast(message) { $('#toast').textContent = message; $('#toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('#toast').hidden = true; }, 4200); }
@@ -86,8 +98,13 @@
   const catLabel = e => catsOf(e).map(catName).join(' · ');
   function extLink(url,label,cls='') { const safe = safeUrl(url); return safe ? `<a class="${cls}" href="${esc(safe)}" target="_blank" rel="noopener noreferrer">${label}</a>` : ''; }
   function navItem(hash,label,name,count,active) { return `<a href="#${hash}" class="nav-link${active?' active':''}"${active?' aria-current="page"':''}>${icon(name)}<span>${label}</span>${count !== undefined ? `<span class="nav-count">${count}</span>` : ''}</a>`; }
+  function countryStats() {
+    return countries.map(([id, label]) => ({ id, label, count: catalog.filter(e => (e.countries || []).includes(id)).length }))
+      .filter(c => c.count > 0)
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'zh-CN'));
+  }
   function renderNav() {
-    $('#nav').innerHTML = `<p class="nav-label">发现 · DISCOVER</p>${navItem('overview','总览','grid',undefined,route==='overview')}${navItem('library','全部工作','paper',catalog.length,route==='library')}<p class="nav-label">研究主题 · TOPICS</p>${categories.map(([id,label,name])=>navItem('category/'+id,label,name,catalog.filter(e=>catsOf(e).includes(id)).length,category===id)).join('')}<p class="nav-label">阅读空间 · WORKSPACE</p>${navItem('timeline','研究时间线','time',undefined,route==='timeline')}${navItem('about','关于与收录说明','info',undefined,route==='about')}`;
+    $('#nav').innerHTML = `<p class="nav-label">发现 · DISCOVER</p>${navItem('overview','总览','grid',undefined,route==='overview')}${navItem('library','全部工作','paper',catalog.length,route==='library')}<p class="nav-label">研究主题 · TOPICS</p>${categories.map(([id,label,name])=>navItem('category/'+id,label,name,catalog.filter(e=>catsOf(e).includes(id)).length,category===id)).join('')}<p class="nav-label">阅读空间 · WORKSPACE</p>${navItem('timeline','研究时间线','time',undefined,route==='timeline')}${navItem('about','关于与收录说明','info',undefined,route==='about')}<p class="nav-label">按国家 · BY COUNTRY</p>${countryStats().map(c=>navItem('country/'+c.id,c.label,'globe',c.count,country===c.id)).join('')}`;
   }
   function renderStats() {
     const subtitles=['馆藏 · 扫描 · 数字化','源检测 · 配准 · 智能方法','测光方法 · 光变曲线 · 时域研究'];
@@ -101,7 +118,7 @@
   function card(e) { return `<article class="resource-card kind-${e.kind}"><div class="card-top"><span class="resource-icon">${icon(e.kind)}</span><span class="card-type">${kinds[e.kind]}</span>${bookmark(e)}</div><h3><button data-detail="${e.id}">${esc(e.title)}</button></h3><p class="card-author">${esc(e.authors)}${e.year?` · ${e.year}`:''}</p><p class="card-description">${esc(e.description)}</p><div class="tags">${e.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><div class="card-footer"><span>${e.venue ? esc(e.venue) : catsOf(e).map(id=>`<span>${catName(id)}</span>`).join(' · ')}</span>${extLink(e.url,e.kind==='paper'?'阅读论文 ↗':'访问资源 ↗')}</div></article>`; }
   function filteredEntries() {
     const words = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
-    const list = catalog.filter(e=>(!category || catsOf(e).includes(category)) && (route!=='saved' || saved.has(e.id)) && (kind==='all' || e.kind===kind) && words.every(word => [e.title,e.shortTitle,e.description,e.authors,e.venue,e.year,e.titleEn,e.shortTitleEn,e.descriptionEn,e.authorsEn,...(e.tagsEn || []),catLabel(e),...e.tags].join(' ').toLocaleLowerCase().includes(word)));
+    const list = catalog.filter(e=>(!category || catsOf(e).includes(category)) && (!country || (e.countries || []).includes(country)) && (route!=='saved' || saved.has(e.id)) && (kind==='all' || e.kind===kind) && words.every(word => [e.title,e.shortTitle,e.description,e.authors,e.venue,e.year,e.titleEn,e.shortTitleEn,e.descriptionEn,e.authorsEn,...(e.tagsEn || []),catLabel(e),...(e.countries || []).map(countryName),...e.tags].join(' ').toLocaleLowerCase().includes(word)));
     if(sort==='newest') list.sort((a,b)=>(b.year || 0)-(a.year || 0));
     if(sort==='oldest') list.sort((a,b)=>(a.year || 9999)-(b.year || 9999));
     if(sort==='az') list.sort((a,b)=>a.title.localeCompare(b.title,'zh-CN'));
@@ -133,16 +150,17 @@
     const hash=location.hash.slice(1) || 'overview';
     if(hash.startsWith('entry/')) { const id=hash.slice(6); if(catalog.some(e=>e.id===id)) { render(); openDetail(id); return; } }
     category=hash.startsWith('category/') && categories.some(c=>c[0]===hash.slice(9)) ? hash.slice(9) : '';
-    route=category?'category':['overview','library','timeline','saved','about'].includes(hash)?hash:'overview';
+    country=!category && hash.startsWith('country/') && countries.some(c=>c[0]===hash.slice(8)) ? hash.slice(8) : '';
+    route=category?'category':country?'country':['overview','library','timeline','saved','about'].includes(hash)?hash:'overview';
     query=''; kind='all'; sort='recommended'; $('#search').value=''; $('#sort').value='recommended';
     $('#intro').hidden=route!=='overview'; $('#library-section').hidden=['timeline','about'].includes(route); $('#timeline-section').hidden=route!=='timeline'; $('#about-section').hidden=route!=='about';
-    $('#section-description').textContent=route==='saved'?'为自己保留一条阅读路径。收藏保存在当前浏览器。':category?'围绕这一主题，连接相关研究、工具与数据。':'从奠基性工作到新方法，一个持续生长的研究目录。';
-    $('#breadcrumb').textContent=category || route;
+    $('#section-description').textContent=route==='saved'?'为自己保留一条阅读路径。收藏保存在当前浏览器。':category?'围绕这一主题，连接相关研究、工具与数据。':country?'按国家浏览：'+countryName(country):'从奠基性工作到新方法，一个持续生长的研究目录。';
+    $('#breadcrumb').textContent=category || (country ? countryName(country) : route);
     closeMenu(); render(); window.scrollTo({top:0,behavior:'instant'});
   }
   function resetFilters() { query='';kind='all';sort='recommended';$('#search').value='';$('#sort').value=sort;renderResults(); }
   function openModal(title,body) { $('#modal-content').innerHTML=`<div class="modal-header"><h2 id="modal-title">${title}</h2><button class="icon-button" data-close aria-label="关闭对话框">${icon('close')}</button></div><div class="modal-body">${body}</div>`; if(!$('#modal').open)$('#modal').showModal(); }
-  function closeModal() { $('#modal').close(); if(location.hash.startsWith('#entry/')) history.replaceState(null,'','#'+(category?'category/'+category:route)); }
+  function closeModal() { $('#modal').close(); if(location.hash.startsWith('#entry/')) history.replaceState(null,'','#'+(category?'category/'+category:country?'country/'+country:route)); }
   function citation(e) {
     if(e.kind!=='paper')return '';
     if(!e.year || !e.citationAuthor)return '';
@@ -152,7 +170,7 @@
   function openDetail(id) {
     const e=catalog.find(e=>e.id===id);if(!e)return;
     const bib=citation(e);
-    openModal(kinds[e.kind],`<div class="tags">${catsOf(e).map(id=>`<span class="tag">${catName(id)}</span>`).join('')}${e.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3 class="detail-title">${esc(e.title)}</h3><p>${esc(e.authors)}${e.year?' · '+e.year:''}<br>${esc(e.venue || '')}</p><p>${esc(e.description)}</p><div class="modal-links">${extLink(e.url,e.kind==='paper'?'阅读论文 ↗':'访问资源 ↗','button primary')}${extLink(e.project,'相关项目 ↗','button subtle')}${extLink(e.code,'代码 ↗','button subtle')}</div>${bib?`<label for="citation-text">BibTeX <small>· 精简引用，请以正式出版信息为准</small></label><textarea class="citation-box" id="citation-text" readonly spellcheck="false">${esc(bib)}</textarea><button class="text-button" data-copy="${e.id}">复制引用</button>`:''}`);
+    openModal(kinds[e.kind],`<div class="tags">${catsOf(e).map(id=>`<span class="tag">${catName(id)}</span>`).join('')}${(e.countries || []).map(c=>`<span class="tag">${countryName(c)}</span>`).join('')}${e.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3 class="detail-title">${esc(e.title)}</h3><p>${esc(e.authors)}${e.year?' · '+e.year:''}<br>${esc(e.venue || '')}</p><p>${esc(e.description)}</p><div class="modal-links">${extLink(e.url,e.kind==='paper'?'阅读论文 ↗':'访问资源 ↗','button primary')}${extLink(e.project,'相关项目 ↗','button subtle')}${extLink(e.code,'代码 ↗','button subtle')}</div>${bib?`<label for="citation-text">BibTeX <small>· 精简引用，请以正式出版信息为准</small></label><textarea class="citation-box" id="citation-text" readonly spellcheck="false">${esc(bib)}</textarea><button class="text-button" data-copy="${e.id}">复制引用</button>`:''}`);
   }
   document.addEventListener('click',async event=>{
     const el=event.target.closest('button, a');if(!el)return;
